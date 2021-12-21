@@ -1,0 +1,77 @@
+ CREATE TABLE "SYS"."country" 
+   (	"code"  VARCHAR2(128 BYTE), 
+	    "countryName" VARCHAR2(128 BYTE)
+   );
+   
+   CREATE TABLE "SYS"."matches" 
+   (	"id" NUMBER, 
+        "tournament_playing_category_id" NUMBER,
+	    "first_registration_id" NUMBER,
+        "second_registration_id" NUMBER,
+    
+        "round" NUMBER
+   );
+   CREATE TABLE "SYS"."matchResult" 
+   (	"Id" NUMBER, 
+	    "match_id" NUMBER,
+        "winner_registration_id" NUMBER,
+        "numberOfSetsPlayed" NUMBER,
+        "is_opponent_retired" VARCHAR2(128 BYTE)
+   );
+   CREATE TABLE "SYS"."Player" 
+   (	"id" NUMBER, 
+        "firstName" VARCHAR2(128 BYTE),
+	    "lastName" VARCHAR2(128 BYTE),
+        "email" VARCHAR2(128 BYTE),
+        "gender" char(1),
+        "dateOfBirth" date,
+        "country_code" number
+   );
+   CREATE TABLE "SYS"."PlayingCategory" 
+   (	"id"  number, 
+	    "categoryName" VARCHAR2(128 BYTE)
+   );
+   CREATE TABLE "SYS"."PlayingIn" 
+   (	"id"  number, 
+        "registration_id" number, 
+	    "seed" number,
+        "tournament_playing_category_id" number
+   );
+   CREATE TABLE "SYS"."Registration" 
+   (	"id" number, 
+	    "registrationDate" date
+   );
+   
+    CREATE TABLE "SYS"."SurfaceType" 
+   (	"id" number, 
+	    "surfaceType" VARCHAR2(128 BYTE)
+   );
+   
+    CREATE TABLE "SYS"."Tournament" 
+   (	"id" number, 
+	    "tournamentName" VARCHAR2(128 BYTE),
+        "location" VARCHAR2(128 BYTE),
+        "startDate" date,
+        "endDate" date,
+        "numberOfRounds" number,
+        "tournament_type_id" number,
+        "surface_type_id" number
+   );
+   
+    CREATE TABLE "SYS"."TournamentPlayingCategory" 
+   (	"id" number, 
+        "tournament_id" number,
+	    "playing_category_id" number
+   );
+   
+    CREATE TABLE "SYS"."TournamentType" 
+   (	"id" number, 
+        "tournamentType" VARCHAR2(128 BYTE)
+   );
+   CREATE TABLE "SYS"."REGISTRATION_PLAYER" 
+   (	"REGISTRATION_ID" number, 
+        "PLAYER_ID" number
+   );
+   commit;
+   
+   
