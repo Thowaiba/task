@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="summaryOfDailyBrokenInvoice" pageWidth="1000" pageHeight="580" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31a964a7-271b-47f3-bd9b-27fb30a0e539">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="WEIGHT" class="java.lang.Double"/>
+	<field name="QTY" class="java.lang.Double"/>
+	<field name="PURCHASING_PRICE" class="java.lang.Double"/>
+	<field name="CODE" class="java.lang.Long"/>
+	<field name="CALIBER_NAME" class="java.lang.String"/>
+	<field name="TAX" class="java.lang.Double"/>
+	<field name="AVARAGE" class="java.lang.Double"/>
+	<variable name="sumOfWeight" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{WEIGHT}]]></variableExpression>
+	</variable>
+	<variable name="sumOfQty" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{QTY}]]></variableExpression>
+	</variable>
+	<variable name="sumofpurchase" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{PURCHASING_PRICE}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="450" y="20" width="186" height="40" uuid="965ce789-8aed-44a7-8354-af6312a51ef1"/>
+				<textElement textAlignment="Center">
+					<font fontName="arabic" size="16"/>
+				</textElement>
+				<text><![CDATA[ملحض يومية فواتير الكسر]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="660" y="0" width="100" height="50" backcolor="#C4BBBB" uuid="0f055cd6-455d-479f-968a-1e83cb55b0b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b942113a-b364-4d8e-bb99-cc8511bcebe8"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[وزن]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="570" y="0" width="90" height="49" backcolor="#C4BBBB" uuid="c838d8b9-d2c8-4da3-a44a-e5861c71826e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edd73cf5-e096-4256-b79b-02d19e6f4dd1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[عدد]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="310" y="30" width="130" height="20" backcolor="#C4BBBB" uuid="d1f4e911-ed87-4b69-947e-0e41331b2fe1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edd27eab-ce44-4406-90ed-9fe2e982ff86"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[بيع]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="440" height="30" backcolor="#C4BBBB" uuid="88c4315e-01f4-4778-b59c-37c619e3e61d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[القيمة]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="860" y="0" width="100" height="50" backcolor="#C4BBBB" uuid="66dd8a63-315f-4a0e-80bb-e43a795e4165">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6540ce1b-e379-47b3-8e61-a785fcf1c1f3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[كود الفرع]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="760" y="0" width="100" height="50" backcolor="#C4BBBB" uuid="d56ac811-d829-4023-9046-c588423dd9ab">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f3f94e9c-5738-43ff-88f4-271e4be0d3cb"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[العيار]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="0" width="130" height="49" backcolor="#C4BBBB" uuid="9c4eb525-49fc-4769-9ba6-d69064d55d6c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="48426fd9-768c-4eba-9c74-a7e79f06eaf4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[متوسط سعر الجرام]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="170" y="30" width="140" height="20" backcolor="#C4BBBB" uuid="b435156a-283e-44e7-b58d-a167ccbc23de">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4dc01993-c653-49bf-a148-4276493dd975"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ضريبة]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="170" height="20" backcolor="#C4BBBB" uuid="c0261ae7-c7b3-404a-852b-7df18c1a9c2e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51b42a05-4a8e-4263-9958-11c34ef20d09"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الاجمالى العام للعيار]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="660" y="-1" width="100" height="32" uuid="13c3f83b-ff22-467d-a1c9-252f64693fa8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b942113a-b364-4d8e-bb99-cc8511bcebe8"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{WEIGHT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="-1" width="90" height="32" uuid="34ca4d51-1b02-4832-8a4c-36adc90a1c2e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edd73cf5-e096-4256-b79b-02d19e6f4dd1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="1" width="130" height="30" uuid="12401cdc-e319-4430-a358-e3f0fd341fcc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edd27eab-ce44-4406-90ed-9fe2e982ff86"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PURCHASING_PRICE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="860" y="-1" width="100" height="32" uuid="3a6e2041-e729-4aa8-8eaf-81bf0a0aa935">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6540ce1b-e379-47b3-8e61-a785fcf1c1f3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="760" y="-1" width="100" height="32" uuid="4c75ae7d-9911-4486-a953-0df34a321439">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f3f94e9c-5738-43ff-88f4-271e4be0d3cb"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CALIBER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#;(#,##0.00#-)">
+				<reportElement x="440" y="-1" width="130" height="32" uuid="c8d97a5e-906c-4ae1-ba72-525da46ab6f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="48426fd9-768c-4eba-9c74-a7e79f06eaf4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AVARAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="1" width="140" height="30" uuid="18c411ad-cccb-4fee-948c-76efb6e77b2f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4dc01993-c653-49bf-a148-4276493dd975"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TAX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1" width="170" height="30" uuid="6c206e8f-1a80-45c2-bddd-3f6ecf5e3f7f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51b42a05-4a8e-4263-9958-11c34ef20d09"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PURCHASING_PRICE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="760" y="0" width="100" height="30" backcolor="#C4BBBB" uuid="f643935f-9290-4bd8-aa4b-0d8d2eac9ef9"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="arabic" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الاجمالى]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="660" y="0" width="100" height="30" uuid="f8deaf3f-f835-4dda-8d7a-78e53a063810"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumOfWeight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="90" height="30" uuid="68320f0b-300a-4435-83f3-7a487441a27a"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumOfQty}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="0" width="130" height="30" uuid="22484ad4-cd9d-477a-96b0-e70943f27ceb"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="0" width="130" height="30" uuid="7754b69b-6ae3-4c98-ba63-1a1f60684b75"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumofpurchase}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="170" y="0" width="140" height="30" uuid="10275cc3-8551-4657-a908-c53fc8648916"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[0.00]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="170" height="30" uuid="a8340b70-8856-4a3b-8458-73a626f24c43"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumofpurchase}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
