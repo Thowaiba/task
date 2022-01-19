@@ -1,3 +1,4 @@
+
  CREATE TABLE "SYS"."country" 
    (	"code"  VARCHAR2(128 BYTE), 
 	    "countryName" VARCHAR2(128 BYTE)
@@ -73,5 +74,5 @@
         "PLAYER_ID" number
    );
    commit;
-   
+
    

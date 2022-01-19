@@ -1,3 +1,4 @@
+
 # bank misr task (the champion)
 .zip file contains:
 1-DBSchema.txt in BankMisrProject for the tables that used in db (oracle db).
